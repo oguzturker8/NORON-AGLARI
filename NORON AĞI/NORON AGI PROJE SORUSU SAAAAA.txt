@@ -1,0 +1,6 @@
+Yapay sinir ağı ile ülke bayrağı tanıma
+
+Yapay sinir ağı projemizde nöron ağlarına 100 ülke bayrağı tanıttık.
+Yapay sinir ağı kendisine verilen bayrakları rastgele şekilde deneyerek öğrendi.
+Ardından test için üzerinde farklı şekilde oynanmış bayrakları sinir ağına girdi olarak verdik
+ve sinir ağı başarılı şekilde bayrakları tanıdı.

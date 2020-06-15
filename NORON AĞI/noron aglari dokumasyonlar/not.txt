@@ -1,0 +1,50 @@
+Aktivasyon fonksiyonunun genel özellikleri:
+1) Almış olduğu değerler -1 ve 1 arasında olacak.
+2) Monoton artan fonksiyon
+3) Global Fonksiyon
+
+Bazı aktivasyon fonksiyonu örnekleri:
+(Pure) Linear: a = f(n) = n
+Treshold (Hard Limit): a = { 1 if n >= 0; 0 if n < 0}
+Sigmoid: a = 1/(1+(e^(-n)))
+Symmetrical Hard Limit: a = { 1 if n >= 0; -1 if n < 0}
+
+Linear Aktivasyon Fonksiyonu, genellikle nöron ağlarının çıkış katmanında kullanılır.
+
+MLFFNN = MULTI LAYER FEED FORWARD NEURAL NETWORK
+MLP = MULTI LAYER PERCEPTRON (ÇOK KATMANLI ALGILAYICI)
+
+2 Layer = Bir gizli katman, bir çıkış katmanı
+Fully Connected = Tüm nodelar birbirine bağlı ise söylenir
+Recurrent = Geribeslemeli, kendine bağlanan ağlar için kullanılır. Nöronlar sisteme, gecikme ile bir önceki çıktıyı iletir.
+
+<a,b>: iç çarpım. a'nını transpozunun b ile çarpımına eşittir. 
+<a,b> = 0 ise a ile b vektörü diktir.
+
+Ağırlık vektörü karar doğrusuna diktir.
+Karar doğrusu: grafiği a ve b bölgelerine ayıran doğru.
+
+Bir nöron yalnızca iki adet sınıflama yapabilirken, S nöron 2^S adet sınıflama yapabilir.
+
+Unified Learning Rule
+w(k+1) = w(k) + (t-a)p
+b(k+1) = b(k) + (t-a)
+
+Ağırlıkları öğrenme işlemiyle nasıl bulabiliriz?
+1- Rastgele ağırlık seç
+2- Rastgele giriş paterni sun
+3- Ağırlıkları Delta kuralına göre güncelle
+4- 2 ve 3 adımları tekrarla
+
+Kolmogrof'un yakınsama teorisi der ki, eğer bir problemin çözümü varsa, buna uygun ağırlıklar bulunabilir.
+
+Tek katmanlı bir algılayıcı ağ, yalnızca lineer ayrılabilir problemleri çözebilir.
+Örnek: AND fonksiyonu lineer ayrılabilirken, XOR fonksiyonu lineer ayrılamaz.
+
+2.png
+
+XOR fonksiyonu, bir gizli katman kullanılarak çözülebilir.
+
+Gerek koşul: Birinci dereceden optimallik koşuludur. Minimum veya maksiumum için aynıdır. Bu ikisi arasındaki ayrım için bir koşul daha gerekir.
+
+Yeter koşul: İkinci dereden optimallik koşuludur. Hessian matrisinin öz değerlerinin pozitif olursa optimal nokta minimum noktadır.
